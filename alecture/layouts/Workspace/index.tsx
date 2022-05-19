@@ -148,7 +148,7 @@ const Workspace: VFC = () => {
     <div>
       <Header>
         <RightMenu>
-          <span onClick={onClickUserProfile}>
+          <span onClick={onClickUserProfile}> //그라바타 이용 랜덤 프로필 사진
             <ProfileImg src={gravatar.url(userData.email, { s: '28px', d: 'retro' })} alt={userData.nickname} />
             {showUserMenu && (
               <Menu style={{ right: 0, top: 38 }} show={showUserMenu} onCloseModal={onCloseUserProfile}>
@@ -182,7 +182,7 @@ const Workspace: VFC = () => {
             <Menu show={showWorkspaceModal} onCloseModal={toggleWorkspaceModal} style={{ top: 95, left: 80 }}>
               <WorkspaceModal>
                 <h2>Sleact</h2>
-                <button onClick={onClickInviteWorkspace}>워크스페이스에 사용자 초대</button>
+                <button onClick={onClickInviteWorkspace}>워크스페이스에 사용자 초대하기</button>
                 <button onClick={onClickAddChannel}>채널 만들기</button>
                 <button onClick={onLogout}>로그아웃</button>
               </WorkspaceModal>
