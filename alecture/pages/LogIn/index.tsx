@@ -7,7 +7,8 @@ import { Link, Redirect } from 'react-router-dom';
 import useSWR from 'swr';
 
 const LogIn = () => {
-  const { data, error, revalidate, mutate } = useSWR('/api/users', fetcher);
+  const { data, error, revalidate, mutate } = useSWR('/api/users', fetcher); //내 로그인 정보를 가져옴 로그인 안되있으면 false
+  //swr은 fetcher로 넘기기만 하고 fetcher(utils/fetcher.ts 에서 처리)
 
   const [logInError, setLogInError] = useState(false);
   const [email, onChangeEmail] = useInput('');
