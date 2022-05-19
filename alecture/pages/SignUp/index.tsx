@@ -65,7 +65,7 @@ const SignUp = () => {
   }
 
   if (data) {
-    return <Redirect to="/workspace/sleact/channel/일반" />;
+    return <Redirect to="/workspace/sleact/channel/일반" />; //이미 로그인 정보가 있을경우 바로 리다이렉트
   }
 
   return (

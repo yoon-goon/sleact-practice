@@ -26,7 +26,7 @@ const LogIn = () => {
           },
         )
         .then((response) => {
-          revalidate();
+          revalidate(); // mutate로 교체 가능 (그 중 swr의 mutate는 좀더 범용적으로 (key, data 순으로 들어가게됨))
         })
         .catch((error) => {
           setLogInError(error.response?.data?.statusCode === 401);
@@ -41,7 +41,7 @@ const LogIn = () => {
 
   if (data) {
     return <Redirect to="/workspace/sleact/channel/일반" />;
-  }
+  } // 로그인을 해서 data가 exist하면 리다이렉트
 
   // console.log(error, userData);
   // if (!error && userData) {
