@@ -5,6 +5,7 @@ interface Props { //props 는 부모 컴포넌트가 자식 컴포넌트에게 �
   show: boolean;
   onCloseModal: () => void;
 }
+//FC<Props> 프롭스를 통해 이 메뉴에 프롭스가 연결이 됨 뒤에 show boolean 타입이 뜨는 이유
 const Modal: FC<Props> = ({ show, children, onCloseModal }) => {
   const stopPropagation = useCallback((e) => {
     e.stopPropagation();

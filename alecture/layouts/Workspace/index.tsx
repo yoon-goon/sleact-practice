@@ -201,11 +201,11 @@ const Workspace: VFC = () => {
       <Modal show={showCreateWorkspaceModal} onCloseModal={onCloseModal}>
         <form onSubmit={onCreateWorkspace}>
           <Label id="workspace-label">
-            <span>워크스페이스 이름</span>
+            <span>카테고리 이름</span>
             <Input id="workspace" value={newWorkspace} onChange={onChangeNewWorkspace} />
           </Label>
           <Label id="workspace-url-label">
-            <span>워크스페이스 url</span>
+            <span>카테고리 url</span>
             <Input id="workspace" value={newUrl} onChange={onChangeNewUrl} />
           </Label>
           <Button type="submit">생성하기</Button>
