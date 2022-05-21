@@ -94,7 +94,7 @@ const Workspace: VFC = () => {
   const onCreateWorkspace = useCallback(
     (e) => {
       e.preventDefault();
-      if (!newWorkspace || !newWorkspace.trim()) return;
+      if (!newWorkspace || !newWorkspace.trim()) return; //trim 을 넣음으로써 띄어쓰기 하나로 통과하는 경우를 막음
       if (!newUrl || !newUrl.trim()) return;
       axios
         .post(
