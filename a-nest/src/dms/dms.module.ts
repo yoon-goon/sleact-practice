@@ -1,4 +1,7 @@
 import { Module } from '@nestjs/common';
+import { DmsService } from './dms.service';
 
-@Module({})
+@Module({
+  providers: [DmsService]
+})
 export class DmsModule {}
