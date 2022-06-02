@@ -11,8 +11,8 @@ export class UsersController {
   }
   // Dto  Data transfer object
   @Post()
-  postUsers(@Body() data: JoinRequestDto) {
-    this.usersService.postUsers(data.email, data.nickname, data.password);
+  postUsers(@Body() body: JoinRequestDto) {
+    this.usersService.postUsers(body.email, body.nickname, body.password);
   }
 
   @Post('login')
