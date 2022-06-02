@@ -2,7 +2,7 @@ import { Controller, Get, Post, Req, Res, Body } from '@nestjs/common';
 import { JoinRequestDto } from './dto/join.request.dto';
 import { UsersService } from './users.service';
 
-@Controller('users')
+@Controller('api/users')
 export class UsersController {
   constructor(private usersService: UsersService) {}
   @Get()
