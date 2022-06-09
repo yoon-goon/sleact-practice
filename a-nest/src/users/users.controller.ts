@@ -1,13 +1,14 @@
 import { Controller, Get, Post, Req, Res, Body } from '@nestjs/common';
 import { JoinRequestDto } from './dto/join.request.dto';
 import { UsersService } from './users.service';
+import { User } from '../common/decorators/user.decorator';
 
 @Controller('api/users')
 export class UsersController {
   constructor(private usersService: UsersService) {}
   @Get()
-  getUsers(@Req() req) {
-    return req.user;
+  getUsers(@User() user) {
+    return user;
   }
   // Dto  Data transfer object
   @Post()
@@ -16,8 +17,8 @@ export class UsersController {
   }
 
   @Post('login')
-  logIn(@Req() req) {
-    return req.user;
+  logIn(@User() user) {
+    return user;
   }
 
   @Post('logout')
